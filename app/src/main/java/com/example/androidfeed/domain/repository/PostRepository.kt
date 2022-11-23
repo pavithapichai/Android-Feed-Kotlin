@@ -10,30 +10,12 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class PostRepository {
-
     private var apiInterface: ApiInterface? = null
 
     init {
-        apiInterface = ApiClient.getApiClient().create(ApiInterface::class.java)
+        apiInterface = ApiClient.getApi()
     }
 
-    fun getAllPosts(): MutableLiveData<List<Post>?> {
-        val data = MutableLiveData<List<Post>?>()
-        apiInterface?.fetchAllPosts()?.enqueue(object : Callback<List<Post>> {
-            override fun onFailure(call: Call<List<Post>>, t: Throwable) {
-                data.value = null
-            }
-
-            override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
-                val res = response.body()
-                if (response.code() == 200 && res != null)
-                    data.value = res
-                else
-                    data.value = null
-            }
-        })
-        return data
-    }
     fun getpostsByUserId(userId:Int): MutableLiveData<List<Post>?> {
         val data = MutableLiveData<List<Post>?>()
         apiInterface?.fetchAllPostsById(userId)?.enqueue(object : Callback<List<Post>> {

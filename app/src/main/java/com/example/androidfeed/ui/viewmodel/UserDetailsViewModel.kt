@@ -21,9 +21,6 @@ class UserDetailsViewModel(application:Application):AndroidViewModel(application
         user = MutableLiveData()
     }
 
-    fun fetchAllPost(){
-        allUserData = postRepository?.getAllPosts()
-    }
     fun fetchAllPostsById(){
         postData = postRepository?.getpostsByUserId(this.userId)
     }
