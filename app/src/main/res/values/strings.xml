@@ -2,5 +2,14 @@
     <string name="app_name">Android Feed</string>
     <string name="hint">Enter username</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
+    <string name="alert_1">Please enter username</string>
+    <string name="alert_2">Please enter valid user name</string>
+
+    <string name="tab_1">User Details</string>
+
+
+    <string name="tab_2">User Post</string>
+
+
 </resources>

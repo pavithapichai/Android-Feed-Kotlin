@@ -30,7 +30,6 @@ class UserDetailsFragment():Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       // vm = ViewModelProvider(this)[UserDetailsViewModel::class.java]
         binding.user = vm.getData()
         vm.user?.observe(viewLifecycleOwner, Observer {
             binding.userName.text = it.name

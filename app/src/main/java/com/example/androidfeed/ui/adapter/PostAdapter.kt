@@ -19,7 +19,6 @@ class PostAdapter(var listPost: List<Post>?) : RecyclerView.Adapter<MyViewHolder
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
         holder.view.txtBody.text = listPost?.get(position)?.body
         holder.view.txtTitle.text = listPost?.get(position)?.title
     }
