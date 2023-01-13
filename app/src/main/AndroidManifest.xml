@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.view.UserDetailsActivity"/>
+        <activity android:name=".ui.view.UserDetailsActivity"
+            android:configChanges=""/>
 
         <receiver
             android:name=".util.NetworkListner"

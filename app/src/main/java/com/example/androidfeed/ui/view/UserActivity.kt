@@ -54,8 +54,9 @@ class UserActivity : AppCompatActivity() ,NetworkListner.ConnectivityReceiverLis
                     userDetailsBinding.pbLoading.visibility = ProgressBar.INVISIBLE
                     if (it.isNullOrEmpty()) showDialog(getString(R.string.alert_2))
                     else {
+
                         if(it.get(0) !=null){
-                            val intent = Intent(this, UserDetailsActivity::class.java).apply {
+                            val intent = Intent(UserActivity(), UserDetailsActivity::class.java).apply {
                                 putExtra(Constants.USER_KEY, it.get(0))
                             }
                             // start your next activity

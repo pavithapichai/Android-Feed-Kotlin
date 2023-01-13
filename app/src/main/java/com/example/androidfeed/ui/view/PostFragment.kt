@@ -21,7 +21,6 @@ class PostFragment():Fragment() {
     private lateinit var postAdapter: PostAdapter
     private lateinit var binding: FragmentPostBinding
     private val vm: UserDetailsViewModel  by activityViewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,5 +48,9 @@ class PostFragment():Fragment() {
             }
 
         })
+    }
+
+    companion object {
+        const val nam ="";
     }
 }
